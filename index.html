@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="styles.css" rel="stylesheet">
 </head>
 
@@ -24,16 +25,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="logo navbar-brand logo d-flex align-items-center me-auto me-xl-0" href="#page-top">
+        <a class="logo navbar-brand logo d-flex align-items-center me-auto me-xl-0" href="#hero">
             <img src="assets/logo.png" alt="Logo">
         </a>
 
         <!-- Nav Menu -->
         <nav id="navmenu" class="collapse navbar-collapse navmenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Strona glowna</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hero">Strona glowna</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Opinii</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Uslugi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
             </ul>
         </nav><!-- End Nav Menu -->
@@ -43,7 +46,8 @@
 <section id="hero" class="d-flex flex-column justify-content-center align-items-end">
     <div class="hero-container" data-aos="fade-in">
         <h1>Patrycja Kownacka</h1>
-        <p><span class="typed" data-typed-items="lektorka jezyka polskiego, doktorka jezykoznawstwa, Podlasianka, bialostoczanka"></span>
+        <p><span class="typed"
+                 data-typed-items="lektorka jezyka polskiego, doktorka jezykoznawstwa, Podlasianka, bialostoczanka"></span>
         </p>
         <div class="social-links">
             <a href="#" class="twitter"><i class="bi bi-twitter h2"></i></a>
@@ -93,9 +97,64 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
-<section id="services" class="bg-light">
+<section id="reviews" class="bg-light">
+    <div class="reviews container">
+        <div class="section-title">
+            <h2>Reviews</h2>
+            <p>My best reviews</p>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="d-flex justify-content-center mb-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <figure class="text-center mb-0">
+                        <blockquote class="blockquote mb-4 fst-italic">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur sint nesciunt ad itaque aperiam
+                            expedita officiis incidunt minus facere molestias inventore.
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0">
+                            Siarhei Blashuk level <cite title="Level">B1</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <div class="d-flex justify-content-center mb-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <figure class="text-center mb-0">
+                        <blockquote class="blockquote mb-4 fst-italic">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur sint nesciunt ad itaque aperiam
+                            expedita officiis incidunt minus facere molestias inventore.
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0">
+                            Siarhei Blashuk level <cite title="Level">B1</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+</section>
+
+<section id="services">
     <div class="services container">
 
         <div class="section-title">
@@ -104,34 +163,85 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                 <div class="icon-box">
                     <div class="icon"><i class="bi bi-person-fill"></i></div>
                     <h4><a href="">Zajęcia indywidualne</a></h4>
-                    <p class="fst-italic">Zajęcia indywidualne to propozycja skrojona specjalnie dla Ciebie, zapewniająca pełną uwagę i
+                    <p class="fst-italic">Zajęcia indywidualne to propozycja skrojona specjalnie dla Ciebie,
+                        zapewniająca pełną uwagę i
                         dostosowanie do Twoich potrzeb i celów.</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                 <div class="icon-box">
                     <div class="icon"><i class="bi bi-people-fill"></i></div>
                     <h4><a href="">Zajęcia grupowe</a></h4>
-                    <p class="fst-italic">Zajęcia grupowe są przeznaczone dla osób, które lepiej uczą się poprzez pracę w grupie. Grupy
+                    <p class="fst-italic">Zajęcia grupowe są przeznaczone dla osób, które lepiej uczą się poprzez pracę
+                        w grupie. Grupy
                         liczą maksymalnie 4 osoby. Zajęcia nastawione są na prace w parach, kreatywne prace projektowe,
                         konwersacje, naukę języka poprzez gry i zabawy.</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                 <div class="icon-box">
                     <div class="icon"><i class="bi bi-briefcase-fill"></i></div>
                     <h4><a href="">Oferta dla firm i instytucji</a></h4>
-                    <p class="fst-italic">Oprócz kursów językowych oferuję również warsztaty kulturowe dla cudzoziemców oraz szkolenia
+                    <p class="fst-italic">Oprócz kursów językowych oferuję również warsztaty kulturowe dla cudzoziemców
+                        oraz szkolenia
                         metodyczne dla początkujących nauczycieli języka polskiego jako obcego lub drugiego.</p>
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<section id="prices">
+    <div class="prices container">
+
+        <div class="section-title">
+            <h2>Price</h2>
+            <p>Coast of Services</p>
+        </div>
+
+        <div class="d-flex justify-content-around flex-wrap flex-row">
+
+            <div class="price-card d-flex flex-column">
+                <h2 class="h4 mb-2">Zajęcia indywidualne</h2>
+                <h4 class="display-3 fw-bold mb-0">200</h4>
+                <p class="text-secondary mb-4">zl / Lesson</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                    <li class="list-group-item"><span><strong>One</strong> To <strong>One</strong></span></li>
+                    <li class="list-group-item"><span><strong>60</strong> Minutes</span></li>
+                    <li class="list-group-item"><span><strong>No</strong> Homework</span></li>
+                </ul>
+                <a href="#contact" class="btn btn-light rounded-4">Contact</a>
+            </div>
+
+            <div class="price-card d-flex flex-column">
+                <h2 class="h4 mb-2">Zajęcia w parach</h2>
+                <h4 class="display-3 fw-bold mb-0">100</h4>
+                <p class="text-secondary mb-4">zl / Lesson</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                    <li class="list-group-item"><span><strong>Two</strong> people in a group</span></li>
+                    <li class="list-group-item"><span><strong>60</strong> Minutes</span></li>
+                    <li class="list-group-item"><span><strong>No</strong> Homework</span></li>
+                </ul>
+                <a href="#contact" class="btn btn-light rounded-4">Contact</a>
+            </div>
+            <div class="price-card d-flex flex-column">
+                <h2 class="h4 mb-2">Zajęcia w grupach</h2>
+                <h4 class="display-3 fw-bold mb-0">75</h4>
+                <p class="text-secondary mb-4">zl / Lesson</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                    <li class="list-group-item"><span>Groups up to <strong>4</strong> people</li>
+                    <li class="list-group-item"><span><strong>60</strong> Minutes</span></li>
+                    <li class="list-group-item"><span><strong>No</strong> Homework</span></li>
+                </ul>
+                <a href="#contact" class="btn btn-light rounded-4">Contact</a>
+            </div>
         </div>
     </div>
 </section>
@@ -195,6 +305,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="scripts.js"></script>
 
 </body>

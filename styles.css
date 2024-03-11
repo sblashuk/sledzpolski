@@ -33,18 +33,10 @@
     scroll-behavior: smooth;
 }
 
-
-/*
-html {
-    scroll-padding-top: 3.5rem;
-}
-*/
-
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
 
 /*--------------------------------------------------------------
 # Global Header
@@ -166,52 +158,48 @@ section {
     --nav-hover-color: #42b5b5;
 }
 
-
 /*
  * Navigation Menu
  */
-/* Desktop */
-@media (min-width: 1200px) {
 
-    .navmenu {
-        padding: 0;
-    }
+.navmenu a,
+.navmenu a:focus {
+    color: var(--nav-color);
+    margin: 18px 15px;
+    padding: 0!important;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+}
 
-    .navmenu ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        align-items: center;
-    }
+.navmenu a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    transition: all 0.3s ease-in-out 0s;
+    visibility: hidden;
+}
 
-    .navmenu li {
-        position: relative;
-    }
+.navmenu li:hover > a,
+.navmenu .active,
+.navmenu .active:focus {
+    color: var(--nav-hover-color) !important;
 
-    .navmenu a,
-    .navmenu a:focus {
-        color: var(--nav-color);
-        padding: 18px 15px;
-        font-size: 16px;
-        font-family: var(--nav-font);
-        font-weight: 400;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        white-space: nowrap;
-        transition: 0.3s;
-    }
+}
 
-    .navmenu li:last-child a {
-        padding-right: 0;
-    }
-
-    .navmenu li:hover > a,
-    .navmenu .active,
-    .navmenu .active:focus {
-        color: var(--nav-hover-color) !important;
-    }
+.navmenu a:hover:before,
+.navmenu .active:before {
+    visibility: visible;
+    width: 25px;
 }
 
 /* Mobile Navigation */
@@ -221,33 +209,17 @@ section {
         --nav-dropdown-color: rgba(255, 255, 255, 0.515);
     }
 
-    /* Home Page Custom Header on page scroll
-    ------------------------------*/
+    /* Home Page Custom Header on page scroll */
     .index-page.scrolled .header {
         --nav-dropdown-color: #3a3939;
     }
 
-    .navmenu ul li {
-    }
-
     .navmenu a,
     .navmenu a:focus {
-        color: var(--nav-dropdown-color);
-        padding: 10px 20px;
+        margin: 10px 20px 10px 0;
         font-family: var(--nav-font);
         font-size: 17px;
         font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        white-space: nowrap;
-        transition: 0.3s;
-    }
-
-    .navmenu a:hover,
-    .navmenu .active,
-    .navmenu .active:focus {
-        color: var(--nav-hover-color) !important
     }
 }
 
@@ -578,4 +550,69 @@ section {
 .scrolled .back-to-top {
     visibility: visible;
     opacity: 1;
+}
+
+
+/*
+ * Swiper
+ */
+.swiper {
+    width: 100%;
+    min-height: 300px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    border: none;
+    background: #ccc;
+    border-radius: initial;
+    width: 20px;
+    height: 2px;
+    margin: 0 2px;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #42b5b5;
+}
+
+/*
+ * Reviews
+ */
+
+.reviews .swiper-slide .bi-star-fill {
+    color: #42b5b5;
+    margin: 5px;
+}
+
+.reviews .swiper-slide .bi-star {
+    color: #ccc;
+    margin: 5px;
+}
+
+
+/*
+ * Prices
+ */
+
+#prices .price-card {
+    text-align: center;
+    background-color: rgba(204, 204, 204, 0.1);
+    transition: all ease-in-out 0.3s;
+    padding: 40px 40px;
+    margin: 5px;
+}
+
+#prices .price-card ul li {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#prices .price-card h4 {
+    color: #42b5b5;
+}
+
+#prices .price-card ul li strong {
+    color: #42b5b5;
+}
+
+#prices .price-card .btn {
+    background-color: #42b5b5;
 }

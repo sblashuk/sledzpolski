@@ -1,18 +1,4 @@
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const header = document.body.querySelector('#header');
-    if (header) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#header',
-            rootMargin: '0px 0px -40%',
-        });
-    }
-
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const navmenu = [].slice.call(document.querySelectorAll('#navmenu .nav-link'));
@@ -24,6 +10,35 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 });
+
+/**
+ * Custom navigation
+ */
+const navLinks = [...document.querySelectorAll('#navmenu .nav-link')]
+const navActive = () => {
+    let position = window.scrollY + 91
+    const isScrolledToBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
+
+    navLinks.forEach((navLink, index) => {
+        if (!navLink.hash) return;
+        let section = document.querySelector(navLink.hash)
+        if (!section) return;
+        if (isScrolledToBottom) {
+            console.log("scrolled to bottom")
+            navLink.classList.remove('active')
+        } else if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+            navLink.classList.add('active')
+        } else {
+            navLink.classList.remove('active')
+        }
+    })
+
+    if (isScrolledToBottom) {
+        navLinks[navLinks.length - 1].classList.add('active');
+    }
+}
+window.addEventListener('load', navActive);
+document.addEventListener('scroll', navActive);
 
 /**
  * Hero type effect
@@ -53,3 +68,19 @@ function toggleScrolled() {
 
 document.addEventListener('scroll', toggleScrolled);
 window.addEventListener('load', toggleScrolled);
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    speed: 600,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    }
+});
