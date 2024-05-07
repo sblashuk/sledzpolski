@@ -24,7 +24,6 @@ const navActive = () => {
         let section = document.querySelector(navLink.hash)
         if (!section) return;
         if (isScrolledToBottom) {
-            console.log("scrolled to bottom")
             navLink.classList.remove('active')
         } else if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
             navLink.classList.add('active')

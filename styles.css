@@ -265,6 +265,7 @@ section {
     margin-bottom: 50px;
     font-size: 26px;
     font-family: "Poppins", sans-serif;
+    min-width: 650px;
 }
 
 #hero p span {
