@@ -249,7 +249,7 @@ section {
     position: relative;
     z-index: 2;
     min-width: 300px;
-    padding-right: 10em !important;
+    padding-left: 10em !important;
 }
 
 #hero h1 {
@@ -331,7 +331,7 @@ section {
     }
 
     #hero .hero-container {
-        padding-right: 1em !important;
+        padding-left: 1em !important;
     }
 }
 
