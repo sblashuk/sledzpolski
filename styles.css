@@ -265,7 +265,6 @@ section {
     margin-bottom: 5px;
     font-size: 26px;
     font-family: "Poppins", sans-serif;
-    min-width: 400px;
 }
 
 #hero p span {
@@ -297,6 +296,23 @@ section {
 
 #hero .social-links a:hover {
     color: #fff;
+}
+
+.exp-txt-btb {
+    padding-left: 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.exp-txt-btb:hover {
+    color: #42b5b5;
+}
+
+.collapsed.exp-txt-btb:after {
+    content: "Więcej";
+}
+
+.exp-txt-btb:after {
+    content: "Mniej";
 }
 
 
@@ -331,7 +347,7 @@ section {
     }
 
     #hero .hero-container {
-        padding-top: 10vh;
+        bottom: -20%;
         max-width: 500px;
         padding-left: 1em !important;
     }
