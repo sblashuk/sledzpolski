@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="sblashuk">
+    <title>sledzpolski</title>
+    <link rel="icon" type="image/x-icon" href="../assets/sledz-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .header {
+            --background-color: #ffffff;
+            --heading-color: #444444;
+            --nav-color: #444444;
+            --nav-hover-color: #42b5b5;
+            box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+            color: var(--default-color);
+            background-color: var(--background-color);
+            padding: 15px 0;
+            transition: all 0.5s;
+            z-index: 997;
+        }
+
+        .header .logo img {
+            max-height: 40px;
+            margin-right: 6px;
+        }
+
+        .header .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        .header .logo span {
+            color: var(--accent-color);
+            font-size: 24px;
+            font-weight: 600;
+            padding-left: 3px;
+        }
+
+        .navmenu a,
+        .navmenu a:focus {
+            color: var(--nav-color);
+            margin: 18px 15px;
+            padding: 0!important;
+            font-size: 16px;
+            font-family: var(--nav-font);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            white-space: nowrap;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .navmenu a:before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--nav-hover-color);
+            transition: all 0.3s ease-in-out 0s;
+            visibility: hidden;
+        }
+
+        .navmenu li:hover > a,
+        .navmenu .active,
+        .navmenu .active:focus {
+            color: var(--nav-hover-color) !important;
+
+        }
+
+        .navmenu a:hover:before,
+        .navmenu .active:before {
+            visibility: visible;
+            width: 25px;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 1199px) {
+
+            .index-page .header {
+                --nav-dropdown-color: rgba(255, 255, 255, 0.515);
+            }
+
+            /* Home Page Custom Header on page scroll */
+            .index-page.scrolled .header {
+                --nav-dropdown-color: #3a3939;
+            }
+
+            .navmenu a,
+            .navmenu a:focus {
+                margin: 10px 20px 10px 0;
+                font-family: var(--nav-font);
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .header .logo {
+                order: 1;
+            }
+
+            .header .navmenu {
+                order: 3;
+            }
+
+            .header .navbar-toggler {
+                order: 2;
+                border: 0;
+            }
+        }
+
+        .bc-mint {
+            background-color: #42b5b5;
+        }
+
+        .checkout-logo {
+            max-width: 250px;
+            margin: 20px 0px;
+        }
+
+        .checkout-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+        }
+
+        .btn:hover {
+            background-color: #42b5b5;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="header" class="navbar navbar-expand-lg header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between mt-0">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="logo navbar-brand logo d-flex align-items-center me-auto me-xl-0" href="/">
+                <img src="../assets/logo.png" alt="Logo">
+            </a>
+
+            <nav id="navmenu" class="collapse navbar-collapse navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">STRONA GŁÓWNA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+        <div class="d-flex flex-column justify-content-center align-items-center checkout-card">
+            <img src="../assets/logo.png" alt="Logo sklepu" class="checkout-logo ">
+        
+            <div class="text-center mt-4">
+                <h1 id="title" class="mb-3">Dziękujemy za zakup! 🎉</h1>
+                <p id="description" class="lead">Twoje zamówienie zostało pomyślnie zrealizowane.</p>
+                <a href="/" class="bc-mint btn btn-light rounded-4">Wróć do strony głównej</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let getQueryParam = (param) => new URLSearchParams(window.location.search).get(param);
+
+        const type = getQueryParam('type');
+        const id = getQueryParam('id');
+
+        const title = document.getElementById('title');
+        const description = document.getElementById('description');
+
+        if (type === 'success') {
+            title.innerHTML = 'Dziękujemy za zakup! 🎉'
+            description.innerHTML = 'Twoje zamówienie zostało pomyślnie zrealizowane.'
+        } else {
+            title.innerHTML = 'Wystąpił błąd 😢'
+            description.innerHTML = 'Nie udało się przetworzyć Twojego zamówienia.'
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
