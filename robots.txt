@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://sledzpolski.pl/sitemap.xml
