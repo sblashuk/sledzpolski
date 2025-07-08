@@ -635,3 +635,15 @@ section {
 #prices .price-card .btn {
     background-color: #42b5b5;
 }
+
+/* 
+ * Shop
+ */
+
+ #shop .price {
+    color: #42b5b5;
+ }
+
+ #shop .btn {
+    background-color: #42b5b5;
+ }
