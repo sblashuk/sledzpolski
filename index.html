@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -16,6 +16,9 @@
     <meta name="description" content="Patrycja – lektorka języka polskiego jako obcego, doktorka językoznawstwa. Uczy przez zabawę i gamifikację. Egzaminatorka, aktywna społecznie.">
     <meta name="author" content="sblashuk">
     <title>Śledź polski</title>
+
+    <link rel="alternate" href="https://sledzpolski.pl/" hreflang="pl" />
+    <link rel="alternate" href="https://sledzpolski.pl/?lang=en" hreflang="en" />
     <link rel="icon" type="image/x-icon" href="assets/sledz-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -52,14 +55,27 @@
 
         <nav id="navmenu" class="collapse navbar-collapse navmenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#hero">STRONA GŁÓWNA</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">O MNIE</a></li>
-                <li class="nav-item"><a class="nav-link" href="#shop">SKLEP</a></li>
-                <li class="nav-item"><a class="nav-link" href="#reviews">OPINIE</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">OFERTA</a></li>
-                <li class="nav-item"><a class="nav-link" href="#prices">CENNIK</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">KONTAKT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hero" data-i18n="header.main">STRONA GŁÓWNA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" data-i18n="header.about_me">O MNIE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#shop" data-i18n="header.shop">SKLEP</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews" data-i18n="header.opinions">OPINIE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services" data-i18n="header.offer">OFERTA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prices" data-i18n="header.price">CENNIK</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="header.contact">KONTAKT</a></li>
             </ul>
+            <div class="dropdown ms-lg-3">
+                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language selector" data-current-lang="en">
+                    EN
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown" role="menu">
+                    <li>
+                        <button class="dropdown-item" type="button" data-lang="pl" id="lang-pl" role="menuitemradio" aria-checked="false">PL</button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button" data-lang="en" id="lang-en" role="menuitemradio" aria-checked="true">EN</button>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
 </nav>
@@ -68,6 +84,7 @@
     <div class="hero-container" data-aos="fade-in">
         <h1>Patrycja Kownacka</h1>
         <p><span class="typed"
+                 data-i18n="hero.tagline.items"
                  data-typed-items="Kreatywna lektorka języka polskiego, miłośniczka gamifikacji w edukacji, doktorka językoznawstwa, egzaminatorka B1, organizatorka kawiarenek językowych"></span>
         </p>
         <div class="social-links">
@@ -84,8 +101,8 @@
     <div class="about-me container">
 
         <div class="section-title">
-            <h2>O mnie</h2>
-            <p>Poznajmy się!</p>
+            <h2 data-i18n="about.title">O mnie</h2>
+            <p data-i18n="about.subtitle">Poznajmy się!</p>
         </div>
         <div class="column">
             <div class="row">
@@ -93,7 +110,7 @@
                     <img src="assets/hero.avif" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Lektorka języka polskiego</h3>
+                    <h3 data-i18n="about.heading">Lektorka języka polskiego</h3>
                     <p>
                         Mam na imię Patrycja. Jestem lektorką języka polskiego jako obcego od 8 lat, a od roku doktorką
                         nauk humanistycznych w dyscyplinie językoznawstwo. Uczę języka polskiego poprzez zabawę. Stosuję
@@ -131,8 +148,8 @@
                     <img src="assets/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                    <h3>Śledź polski</h3>
-                    <p>
+                    <h3 data-i18n="brand.title">Śledź polski</h3>
+                    <p data-i18n="brand.paragraph">
                         Nazwa ,,Śledź polski” jest swoistą grą słowną. Z jednej strony ,,śledź” to nazwa ryby, która
                         stanowi symbol specyficznej kresowej wymowy charakterystycznej dla niektórych mieszkańców
                         Podlasia. Ta część nazwy mojej firmy wskazuje na to, że lokalność podlaska odgrywa dużą rolę w
@@ -158,8 +175,8 @@
 <section id="shop" class="bg-light">
     <div class="shop container">
         <div class="section-title">
-            <h2>Sklep</h2>
-            <p>Sklep z materiałami edukacyjnymi</p>
+            <h2 data-i18n="shop.section.title">Sklep</h2>
+            <p data-i18n="shop.section.subtitle">Sklep z materiałami edukacyjnymi</p>
         </div>
         <div class="row" id="shop-wrapper">
         </div>
@@ -169,8 +186,8 @@
 <section id="reviews">
     <div class="reviews container">
         <div class="section-title">
-            <h2>Opinie</h2>
-            <p>Opinie moich uczniów</p>
+            <h2 data-i18n="reviews.section.title">Opinie</h2>
+            <p data-i18n="reviews.section.subtitle">Opinie moich uczniów</p>
         </div>
         <div class="swiper">
             <div class="swiper-wrapper" id="reviews-wrapper">
@@ -184,8 +201,8 @@
     <div class="services container">
 
         <div class="section-title">
-            <h2>Oferta</h2>
-            <p>Moje usługi</p>
+            <h2 data-i18n="services.section.title">Oferta</h2>
+            <p data-i18n="services.section.subtitle">Moje usługi</p>
         </div>
 
         <div class="row" id="services-wrapper">
@@ -197,44 +214,11 @@
     <div class="prices container">
 
         <div class="section-title">
-            <h2>Cennik</h2>
-            <p>Koszt usług</p>
+            <h2 data-i18n="prices.section.title">Cennik</h2>
+            <p data-i18n="prices.section.subtitle">Koszt usług</p>
         </div>
 
-        <div class="d-flex justify-content-around flex-wrap flex-row">
-
-            <div class="price-card d-flex flex-column">
-                <h2 class="h4 mb-2">Zajęcia indywidualne</h2>
-                <h4 class="display-3 fw-bold mb-0">140</h4>
-                <p class="text-secondary mb-4">zł/zajęcia</p>
-                <ul class="list-group list-group-flush mb-4 flex-grow-1">
-                    <li class="list-group-item"><span><strong>Jedna</strong> osoba</span></li>
-                    <li class="list-group-item"><span><strong>60</strong> minut</span></li>
-                </ul>
-                <a href="#contact" class="btn btn-light rounded-4 text-light fw-medium">Zapisz się!</a>
-            </div>
-
-            <div class="price-card d-flex flex-column">
-                <h2 class="h4 mb-2">Zajęcia w parach</h2>
-                <h4 class="display-3 fw-bold mb-0">85</h4>
-                <p class="text-secondary mb-4">zł/zajęcia</p>
-                <ul class="list-group list-group-flush mb-4 flex-grow-1">
-                    <li class="list-group-item"><span><strong>Dwie</strong> osoby w grupie</span></li>
-                    <li class="list-group-item"><span><strong>60</strong> minut</span></li>
-                </ul>
-                <a href="#contact" class="btn btn-light rounded-4 text-light fw-medium">Zapisz się!</a>
-            </div>
-
-            <div class="price-card d-flex flex-column">
-                <h2 class="h4 mb-2">Zajęcia w grupach</h2>
-                <h4 class="display-3 fw-bold mb-0">60</h4>
-                <p class="text-secondary mb-4">zł/zajęcia</p>
-                <ul class="list-group list-group-flush mb-4 flex-grow-1">
-                    <li class="list-group-item"><span>Grupy do  <strong>5</strong> osób</span></li>
-                    <li class="list-group-item"><span><strong>60</strong> minut</span></li>
-                </ul>
-                <a href="#contact" class="btn btn-light rounded-4 text-light fw-medium">Zapisz się!</a>
-            </div>
+        <div class="d-flex justify-content-around flex-wrap flex-row" id="prices-wrapper">
         </div>
     </div>
 </section>
@@ -245,8 +229,8 @@
     <div class="contact container">
 
         <div class="section-title">
-            <h2>Kontakt</h2>
-            <p>Skontaktuj się ze mną!</p>
+            <h2 data-i18n="contact.section.title">Kontakt</h2>
+            <p data-i18n="contact.section.subtitle">Skontaktuj się ze mną!</p>
         </div>
 
         <div class="row mt-2">
@@ -254,15 +238,15 @@
             <div class="col-md-6 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bi bi-map"></i>
-                    <h3>Lokalizacja</h3>
-                    <p>Białystok, Polska</p>
+                    <h3 data-i18n="contact.location.title">Lokalizacja</h3>
+                    <p data-i18n="contact.location.value">Białystok, Polska</p>
                 </div>
             </div>
 
             <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bi bi-share-fill"></i>
-                    <h3>Media społecznościowe</h3>
+                    <h3 data-i18n="contact.social.title">Media społecznościowe</h3>
                     <div class="social-links">
                         <a href="https://www.instagram.com/sledzpolski/" class="instagram"><i
                                 class="bi bi-instagram"></i></a>
@@ -275,8 +259,8 @@
             <div class="col-md-6 mt-4 d-flex align-items-stretch">
                 <div class="info-box">
                     <i class="bi bi-envelope"></i>
-                    <h3>Napisz do mnie</h3>
-                    <p>sledzpolski@gmail.com</p>
+                    <h3 data-i18n="contact.email.title">Napisz do mnie</h3>
+                    <p data-i18n="contact.email.value">sledzpolski@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -285,9 +269,9 @@
 <!-- Footer-->
 <footer class="py-5 bg-dark">
     <div class="container px-4">
-        <p class="m-0 text-center text-white">Copyright &copy;Sledzpolski 2024</p>
+        <p class="m-0 text-center text-white" data-i18n="footer.copyright">Copyright &copy;Sledzpolski 2024</p>
         <p class="m-0 text-center blockquote-footer">
-            Made by <cite title="Source Title">Siarhei Blashuk</cite>
+            <span data-i18n="footer.madeby.prefix">Made by</span> <cite title="Source Title" data-i18n="footer.madeby.author">Siarhei Blashuk</cite>
         </p>
     </div>
 </footer>
@@ -313,6 +297,25 @@
         </figure>
     </div>
 </template>
+<!-- Template for prices -->
+<template id="prices-template">
+    <div class="price-card d-flex flex-column">
+        <h2 class="h4 mb-2">
+            <!-- Title inserted dynamically -->
+        </h2>
+        <h4 class="display-3 fw-bold mb-0">
+            <!-- Price inserted dynamically -->
+        </h4>
+        <p class="text-secondary mb-4" data-i18n="prices.price.unit">zł/zajęcia</p>
+        <ul class="list-group list-group-flush mb-4 flex-grow-1">
+            <li class="list-group-item">
+            </li>
+            <li class="list-group-item">
+            </li>
+        </ul>
+        <a href="#contact" class="btn btn-light rounded-4 text-light fw-medium" data-i18n="prices.cta">Zapisz się!</a>
+    </div>
+</template>
 <!-- Template for services -->
 <template id="service-template">
     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
@@ -332,7 +335,7 @@
 <!-- Template for shop item -->
 <template id="shop-template">
     <div class="card border-light col-lg-4 col-md-6 col-12 d-flex align-items-stretch m-2">
-        <img class="card-img-top" src="" alt="E-Book Cover">
+        <img class="card-img-top" src="" alt="E-Book Cover" data-i18n="shop.card.image.alt">
         <div class="card-body">
             <h5 class="shop-item-title card-title"></h5>
             <h6 class="card-subtitle mb-2 text-muted"></h6>
@@ -341,10 +344,10 @@
         <div class="card-footer bg-transparent border-light d-flex flex-row justify-content-between">
             <div class="d-flex flex-row">
                 <h6 class="shop-item-price price display-6 fw-bold mb-0"></h6>
-                <p class="text-secondary mb-4">zł</p>
+                <p class="text-secondary mb-4" data-i18n="shop.card.price.currency">zł</p>
             </div>
             <a href="#" class="btn btn-light rounded-4 align-self-center buy-button text-light fw-medium">
-                <i class="bi bi-cart-fill"></i> Kup
+                <i class="bi bi-cart-fill"></i> <span data-i18n="shop.card.buy">Kup</span>
             </a>
         </div>
     </div>
@@ -352,6 +355,7 @@
 
 <!-- JS-->
 <script src="js/reviews.js"></script>
+<script src="js/prices.js"></script>
 <script src="js/services.js"></script>
 <script src="js/shop.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -360,6 +364,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="scripts.js"></script>
+<script src="/js/i18n.js" defer></script>
 
 </body>
 
