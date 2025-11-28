@@ -1,6 +1,9 @@
 {
   "site.title": "Follow Polish",
   "site.meta.description": "Patrycja — teacher of Polish as a foreign language, PhD in linguistics. Teaches through play and gamification. Certified examiner, socially engaged.",
+
+  "seo.g": "        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Person\",\n            \"@id\": \"https://sledzpolski.pl/\",\n            \"name\": \"Patrycja Kownacka\",\n            \"jobTitle\": \"Polish language teacher\",\n            \"description\": \"Patrycja is a Polish language teacher for foreigners and a PhD in linguistics. She teaches through play and gamification, works as an examiner and is socially engaged.\",\n            \"sameAs\": [\n                \"https://www.instagram.com/sledzpolski/\",\n                \"https://www.facebook.com/profile.php?id=100086326670240\"\n            ],\n            \"inLanguage\": \"en\"\n        }",
+
   "header.main": "HOME",
   "header.about_me": "ABOUT",
   "header.shop": "SHOP",

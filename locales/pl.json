@@ -1,6 +1,9 @@
 {
   "site.title": "Śledź polski",
   "site.meta.description": "Patrycja – lektorka języka polskiego jako obcego, doktorka językoznawstwa. Uczy przez zabawę i gamifikację. Egzaminatorka, aktywna społecznie.",
+
+  "seo.g": "        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Person\",\n            \"@id\": \"https://sledzpolski.pl/\",\n            \"name\": \"Patrycja Kownacka\",\n            \"jobTitle\": \"Lektorka języka polskiego\",\n            \"description\": \"Patrycja – lektorka języka polskiego jako obcego, doktorka językoznawstwa. Uczy przez zabawę i gamifikację. Egzaminatorka, aktywna społecznie.\",\n            \"sameAs\": [\n                \"https://www.instagram.com/sledzpolski/\",\n                \"https://www.facebook.com/profile.php?id=100086326670240\"\n            ],\n            \"inLanguage\": \"pl\"\n        }",
+
   "header.main": "STRONA GŁÓWNA",
   "header.about_me": "O MNIE",
   "header.shop": "SKLEP",
