@@ -223,6 +223,20 @@ section {
     }
 }
 
+/* Lang Drop Down */
+
+.dropdown-menu.dropdown-menu-dynamic[data-bs-popper] {
+    right: 0;
+    left: auto;
+}
+
+@media (max-width: 1199px) {
+    .dropdown-menu.dropdown-menu-dynamic[data-bs-popper] {
+       right: auto;
+       left: 0;
+   }
+}
+
 /*
  * Hero Section
  */
