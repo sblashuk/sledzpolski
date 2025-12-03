@@ -1,6 +1,6 @@
 (function () {
     // Config
-    const supported = ["en","pl"];
+    const supported = ["en","pl", "ru"];
     const defaultLang = "pl";
 
     // Button state classes for active/inactive (Bootstrap)
@@ -66,10 +66,22 @@
         // Update the dropdown toggle button to show only the active language
         const toggle = document.getElementById('langDropdown');
         if (toggle) {
-            const label = (active || '').toUpperCase();
-            toggle.textContent = label || 'EN';
+            let label;
+            switch (active) {
+                case 'en':
+                    label = "English";
+                    break;
+                case 'pl':
+                    label = "Polish"
+                    break;
+                case 'ru':
+                    label = "Russian";
+                    break
+            }
+
+            toggle.textContent = (active || 'PL').toUpperCase();
             toggle.setAttribute('data-current-lang', active);
-            toggle.setAttribute('aria-label', 'Language selector, current ' + (active === 'pl' ? 'Polish' : 'English'));
+            toggle.setAttribute('aria-label', 'Language selector, current ' + label);
         }
     }
 
