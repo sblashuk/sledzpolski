@@ -5,7 +5,7 @@ const items = [
         "subtitle": "e-book",
         "description": "Materiały do dyskusji na lekcjach języka polskiego jaki obcego (poziom B1/B2) - PDF do wydruku na lekcje stacjonarne i interaktywne ćwiczenia na zajęcia online",
         "image": "ebook_Humanizacja_zwierząt.avif",
-        "link": "https://buy.stripe.com/6oUeVc0Kkeish0dd4w9MY00",
+        "link": "#contact",
         "price": 25
     }
 ]
