@@ -42,18 +42,52 @@ document.addEventListener('scroll', navActive);
 /**
  * Hero type effect
  */
-const typed = document.querySelector('.typed')
-if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-        strings: typed_strings,
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000
-    });
-}
+(function initTypedEffect() {
+    const typed = document.querySelector('.typed');
+    if (!typed) return;
+
+    let typedInstance = null;
+
+    const parseTags = (node) => {
+        return (node.getAttribute('data-typed-items') || '')
+            .trim()
+            .split(',')
+            .map(tag => tag.trim())
+            .filter(Boolean);
+    }
+
+    const initOrUpdate = () => {
+        const tags = parseTags(typed);
+
+        if (!typedInstance) {
+            typedInstance = new Typed('.typed', {
+                strings: tags,
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 2000
+            });
+        } else {
+            typedInstance.strings = tags;
+            if (typedInstance.el) {
+                typedInstance.el.textContent = '';
+            }
+            typedInstance.reset(true);
+        }
+    }
+
+    initOrUpdate();
+
+    const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+            if (m.type === 'attributes' && m.attributeName === 'data-typed-items') {
+                initOrUpdate();
+            }
+        }
+    })
+
+    observer.observe(typed, { attributes: true, attributeFilter: ['data-typed-items']})
+})()
 
 /**
  * Apply .scrolled class to the body as the page is scrolled down

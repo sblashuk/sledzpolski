@@ -1,0 +1,89 @@
+{
+  "site.title": "Follow Polish",
+  "site.meta.description": "Patrycja — teacher of Polish as a foreign language, PhD in linguistics. Teaches through play and gamification. Certified examiner, socially engaged.",
+
+  "seo.g": "        {\n            \"@context\": \"https://schema.org\",\n            \"@type\": \"Person\",\n            \"@id\": \"https://sledzpolski.pl/\",\n            \"name\": \"Patrycja Kownacka\",\n            \"jobTitle\": \"Polish language teacher\",\n            \"description\": \"Patrycja is a Polish language teacher for foreigners and a PhD in linguistics. She teaches through play and gamification, works as an examiner and is socially engaged.\",\n            \"sameAs\": [\n                \"https://www.instagram.com/sledzpolski/\",\n                \"https://www.facebook.com/profile.php?id=100086326670240\"\n            ],\n            \"inLanguage\": \"en\"\n        }",
+
+  "header.main": "HOME",
+  "header.about_me": "ABOUT",
+  "header.shop": "SHOP",
+  "header.opinions": "REVIEWS",
+  "header.offer": "SERVICES",
+  "header.price": "PRICING",
+  "header.contact": "CONTACT",
+
+  "lang.dropdown.aria": "Language selector, current {{language}}",
+  "lang.label.en": "EN",
+  "lang.label.pl": "PL",
+
+  "hero.name": "Patrycja Kownacka",
+  "hero.tagline.items": "Creative Polish teacher, gamification enthusiast, PhD in linguistics, B1 examiner, language meetups organizer",
+
+  "about.title": "About me",
+  "about.subtitle": "Let’s get to know each other!",
+  "about.heading": "Polish language teacher",
+  "about.me": "My name is Patrycja. I have been teaching Polish as a foreign language for 8 years and hold a PhD in the humanities (linguistics). I teach through play, using active methods and gamification. I cooperate with the School of Polish Language and Culture “Pollando” at the University of Białystok, Belsat TV, and local NGOs. I’m also an examiner for certification exams in Polish as a foreign language at the Białystok University of Technology. With the Podlasie Library in Białystok, I co-organize discussion meetings for foreigners and Poles — “Polish-Polish Conversations”, and with the “Window to the East” Foundation and the “Women’s Club” — a “Language Café” for women learning Polish.",
+  "about.science.title": "Research interests:",
+  "about.science.body": "Polish glottodidactics, methodology of teaching Polish as a first language, culture didactics.",
+  "about.publications.title": "Selected publications:",
+  "about.publications.body": "Lexiculture as a gateway to locality — using a hip-hop song in Polish classes (in: On the issues of language education, vol. 8…), Speaking through art… (in: Activation — innovation — inspiration in (glotto)didactics…), The linguistic image of Podlasie… (in: On the issues of language education, vol. 9…), Using local biographies… (Acta Universitatis Lodziensis… 2022, no. 29).",
+  "brand.title": "Follow Polish",
+  "brand.paragraph": "The name \"Śledź polski\" is a specific play on words. On the one hand, śledź is the Polish word for \"herring\"—a fish that serves as a symbol of the specific borderland pronunciation characteristic of some residents of Podlasie. This part of my company’s name indicates that the local culture of Podlasie plays a major role in my teaching activities. In my lessons, I strive to introduce local elements, particularly for those students living within the Podlaskie Voivodeship. This stems from my conviction that familiarity with local realities serves as a gateway to integrating with the local community.\n\nOn the other hand, śledź is the imperative form of the verb śledzić, meaning to track, follow, or closely observe something or someone. My classes serve to regularly examine the Polish language along with its nuances. This aspect of my work is also tied to my Instagram account, which aims to popularize knowledge of Polish as a foreign language. Additionally, I lead various meetings and initiatives regarding the Polish language and the Podlasie region, such as \"Rozmówki polsko-polskie\" (Polish-Polish Conversations—a language café for Poles and foreigners) and \"Alfabet podlaski\" (The Podlasie Alphabet—a lecture on local vocabulary).",
+
+  "shop.section.title": "Shop",
+  "shop.section.subtitle": "Educational materials shop",
+  "shop.card.image.alt": "E-book cover",
+  "shop.card.price.currency": "PLN",
+  "shop.card.buy": "Buy",
+
+  "shop.0.title": "Humanization of Animals",
+  "shop.0.description": "Materials for discussions in Polish as a foreign language classes (level B1/B2) – printable PDF for in-person lessons and interactive exercises for online classes",
+
+
+  "reviews.section.title": "Reviews",
+  "reviews.section.subtitle": "My students’ opinions",
+
+  "services.section.title": "Services",
+  "services.section.subtitle": "What I offer",
+
+  "prices.section.title": "Pricing",
+  "prices.section.subtitle": "Service costs",
+  "prices.price.unit": "PLN/lesson",
+  "prices.cta": "Sign up!",
+
+  "prices.0.title": "Individual lessons",
+  "prices.0.tag1": "One person",
+  "prices.0.tag2": "60 minutes",
+  "prices.1.title": "Lessons in pairs",
+  "prices.1.tag1": "Two people in a group",
+  "prices.1.tag2": "60 minutes",
+  "prices.2.title": "Group lessons",
+  "prices.2.tag1": "Groups up to 5 people",
+  "prices.2.tag2": "60 minutes",
+
+
+  "contact.section.title": "Contact",
+  "contact.section.subtitle": "Get in touch!",
+  "contact.location.title": "Location",
+  "contact.location.value": "Białystok, Poland",
+  "contact.social.title": "Social media",
+  "contact.email.title": "Email me",
+  "contact.email.value": "sledzpolski@gmail.com",
+
+  "footer.copyright": "Copyright ©Sledzpolski 2024",
+  "footer.madeby.prefix": "Made by",
+  "footer.madeby.author": "Siarhei Blashuk",
+
+  "ui.back_to_top": "Back to top",
+  "ui.currency.pln": "PLN",
+  "ui.nav.toggle": "Toggle navigation",
+
+  "services.0.title": "Individual lessons",
+  "services.0.description": "Individual lessons are a proposal tailored specifically for you, providing full attention and adaptation to your needs and goals.",
+  "services.1.title": "Group lessons",
+  "services.1.description": "Group lessons are intended for people who learn better through group work. Groups consist of up to 6 people. The classes focus on pair work, creative projects, conversations, and learning the language through games and activities.",
+  "services.2.title": "Offer for companies and institutions",
+  "services.2.description": "In addition to language courses, I also offer cultural workshops for foreigners and methodological training for beginner teachers of Polish as a foreign or second language.",
+  "services.3.title": "Cultural workshops and language cafés",
+  "services.3.description": "Events aimed at introducing participants to Polish and Podlasie culture and, as a result, enabling their integration with the local community. During language cafés, foreigners can improve their ability to speak freely on various topics."
+}

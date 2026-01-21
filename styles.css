@@ -28,9 +28,15 @@
     --nav-dropdown-background-color: rgba(255, 255, 255, 0.2);
 }
 
+
 /* Smooth scroll */
 :root {
     scroll-behavior: smooth;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -221,6 +227,20 @@ section {
         font-size: 17px;
         font-weight: 500;
     }
+}
+
+/* Lang Drop Down */
+
+.dropdown-menu.dropdown-menu-dynamic[data-bs-popper] {
+    right: 0;
+    left: auto;
+}
+
+@media (max-width: 1199px) {
+    .dropdown-menu.dropdown-menu-dynamic[data-bs-popper] {
+       right: auto;
+       left: 0;
+   }
 }
 
 /*
